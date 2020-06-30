@@ -66,7 +66,8 @@ public class MainActivity extends AppCompatActivity {
     ImageButton favoriteImageButton;
     String urlCurrentWeatherAPI = "http://api.openweathermap.org/data/2.5/weather?q=";
     String urlForecastAPI = "http://api.openweathermap.org/data/2.5/forecast?q=";
-    String apiKey = "&APPID=9697ca7669bdbf4ffbb4a5b9e079f713";
+    // ---------------- INSERT API KEY HERE ----------------
+    String apiKey = "&APPID=";
     String options = "&units=metric&lang=it";
     String citySelected = "";
     String citySavedPassed="";
