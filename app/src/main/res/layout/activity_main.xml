@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <AutoCompleteTextView
+        android:id="@+id/autoCompleteTextView"
+        android:layout_width="0dp"
+        android:layout_height="43dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="8dp"
+        android:completionThreshold="4"
+        android:hint="Select a city"
+        app:layout_constraintEnd_toStartOf="@+id/searchImageButton"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        android:id="@+id/buttonCurrentLocation"
+        style="@style/Widget.AppCompat.Button.Borderless"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:adjustViewBounds="true"
+        android:src="@drawable/baseline_star_black_24dp"
+        app:layout_constraintBottom_toBottomOf="@+id/autoCompleteTextView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/autoCompleteTextView" />
+
+
+    <ImageButton
+        android:id="@+id/buttonSaveCity"
+        style="@style/Widget.AppCompat.Button.Borderless"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:adjustViewBounds="true"
+        android:onClick="addToFavorite"
+        android:src="@drawable/baseline_favorite_border_black_24dp"
+        app:layout_constraintBottom_toBottomOf="@+id/buttonCurrentLocation"
+        app:layout_constraintEnd_toStartOf="@+id/buttonCurrentLocation"
+        app:layout_constraintTop_toTopOf="@+id/buttonCurrentLocation" />
+
+    <ListView
+        android:id="@+id/listView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/weatherImageView" />
+
+    <ImageView
+        android:id="@+id/weatherImageView"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/citySelectedTextView" />
+
+    <TextView
+        android:id="@+id/currentWeatherTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:textAlignment="center"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/weatherImageView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/weatherImageView"
+        app:layout_constraintTop_toTopOf="@+id/weatherImageView" />
+
+    <TextView
+        android:id="@+id/citySelectedTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="8dp"
+        android:textAlignment="center"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/searchImageButton" />
+
+    <ImageButton
+        android:id="@+id/searchImageButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:onClick="showSearchText"
+        app:layout_constraintBottom_toBottomOf="@+id/autoCompleteTextView"
+        android:adjustViewBounds="true"
+        style="@style/Widget.AppCompat.Button.Borderless"
+        app:layout_constraintEnd_toStartOf="@+id/buttonSaveCity"
+        app:layout_constraintTop_toTopOf="@+id/autoCompleteTextView"
+        app:srcCompat="@drawable/baseline_search_black_24dp" />
+
+
+</android.support.constraint.ConstraintLayout>
